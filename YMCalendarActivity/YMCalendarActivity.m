@@ -34,29 +34,33 @@
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
-    for (YMCalendarActivityEvent *event in activityItems) {
-        if (viewController == nil) {
-            viewController = [[EKEventEditViewController alloc] init];
+    for (id activityItem in activityItems) {
+        if ([activityItem isKindOfClass:[YMCalendarActivityEvent class]]) {
+            YMCalendarActivityEvent *event = activityItem;
             
-            EKEventStore *es = [[EKEventStore alloc] init];
-            [es requestAccessToEntityType:EKEntityTypeEvent
-                               completion:^(BOOL granted, NSError *error) {
-                                   if (granted) {
-                                       EKEvent *e = [EKEvent eventWithEventStore:es];
-                                       e.title = event.title;
-                                       e.location = event.location;
-                                       e.notes = event.notes;
-                                       e.URL = event.URL;
-                                       e.timeZone = event.timeZone;
-                                       e.startDate = event.startDate;
-                                       e.endDate = event.endDate;
+            if (viewController == nil) {
+                viewController = [[EKEventEditViewController alloc] init];
+                
+                EKEventStore *es = [[EKEventStore alloc] init];
+                [es requestAccessToEntityType:EKEntityTypeEvent
+                                   completion:^(BOOL granted, NSError *error) {
+                                       if (granted) {
+                                           EKEvent *e = [EKEvent eventWithEventStore:es];
+                                           e.title = event.title;
+                                           e.location = event.location;
+                                           e.notes = event.notes;
+                                           e.URL = event.URL;
+                                           e.timeZone = event.timeZone;
+                                           e.startDate = event.startDate;
+                                           e.endDate = event.endDate;
+                                           
+                                           viewController.eventStore = es;
+                                           viewController.event = e;
+                                       }
                                        
-                                       viewController.eventStore = es;
-                                       viewController.event = e;
-                                   }
-                                   
-                                   viewController.editViewDelegate = self;
-                               }];
+                                       viewController.editViewDelegate = self;
+                                   }];
+            }
         }
     }
 }
