@@ -18,6 +18,8 @@
 		702A528C17848EC100498B53 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 702A528B17848EC100498B53 /* Default-568h@2x.png */; };
 		702A528F17848EC100498B53 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702A528D17848EC100498B53 /* MainStoryboard.storyboard */; };
 		702A529217848EC100498B53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702A529117848EC100498B53 /* ViewController.m */; };
+		702A529B1784913900498B53 /* YMCalendarActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 702A529A1784913900498B53 /* YMCalendarActivity.m */; };
+		702A529E178491F700498B53 /* YMCalendarActivityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 702A529D178491F700498B53 /* YMCalendarActivityEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		702A528E17848EC100498B53 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		702A529017848EC100498B53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		702A529117848EC100498B53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		702A52991784913900498B53 /* YMCalendarActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCalendarActivity.h; sourceTree = "<group>"; };
+		702A529A1784913900498B53 /* YMCalendarActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCalendarActivity.m; sourceTree = "<group>"; };
+		702A529C178491F700498B53 /* YMCalendarActivityEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCalendarActivityEvent.h; sourceTree = "<group>"; };
+		702A529D178491F700498B53 /* YMCalendarActivityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCalendarActivityEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		702A526917848EC100498B53 = {
 			isa = PBXGroup;
 			children = (
+				702A52981784911400498B53 /* YMCalendarActivity */,
 				702A527B17848EC100498B53 /* YMCalendarActivityDemo */,
 				702A527417848EC100498B53 /* Frameworks */,
 				702A527317848EC100498B53 /* Products */,
@@ -105,6 +112,18 @@
 				702A528B17848EC100498B53 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		702A52981784911400498B53 /* YMCalendarActivity */ = {
+			isa = PBXGroup;
+			children = (
+				702A52991784913900498B53 /* YMCalendarActivity.h */,
+				702A529A1784913900498B53 /* YMCalendarActivity.m */,
+				702A529C178491F700498B53 /* YMCalendarActivityEvent.h */,
+				702A529D178491F700498B53 /* YMCalendarActivityEvent.m */,
+			);
+			name = YMCalendarActivity;
+			path = ../YMCalendarActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +195,8 @@
 				702A528217848EC100498B53 /* main.m in Sources */,
 				702A528617848EC100498B53 /* AppDelegate.m in Sources */,
 				702A529217848EC100498B53 /* ViewController.m in Sources */,
+				702A529B1784913900498B53 /* YMCalendarActivity.m in Sources */,
+				702A529E178491F700498B53 /* YMCalendarActivityEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
