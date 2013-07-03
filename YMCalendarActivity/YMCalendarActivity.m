@@ -30,7 +30,12 @@
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
-    return YES;
+    for (id activityItem in activityItems) {
+        if ([activityItem isKindOfClass:[YMCalendarActivityEvent class]]) {
+            return YES;
+        }
+    }
+    return  NO;
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {
