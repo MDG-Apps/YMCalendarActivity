@@ -22,6 +22,8 @@
 		702A529E178491F700498B53 /* YMCalendarActivityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 702A529D178491F700498B53 /* YMCalendarActivityEvent.m */; };
 		702A52A1178497D300498B53 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702A529F178497D200498B53 /* EventKit.framework */; };
 		702A52A2178497D300498B53 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702A52A0178497D300498B53 /* EventKitUI.framework */; };
+		702A52A517849FF500498B53 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 702A52A317849FF500498B53 /* Calendar.png */; };
+		702A52A617849FF500498B53 /* Calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 702A52A417849FF500498B53 /* Calendar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		702A529D178491F700498B53 /* YMCalendarActivityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCalendarActivityEvent.m; sourceTree = "<group>"; };
 		702A529F178497D200498B53 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		702A52A0178497D300498B53 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		702A52A317849FF500498B53 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
+		702A52A417849FF500498B53 /* Calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				702A529A1784913900498B53 /* YMCalendarActivity.m */,
 				702A529C178491F700498B53 /* YMCalendarActivityEvent.h */,
 				702A529D178491F700498B53 /* YMCalendarActivityEvent.m */,
+				702A52A317849FF500498B53 /* Calendar.png */,
+				702A52A417849FF500498B53 /* Calendar@2x.png */,
 			);
 			name = YMCalendarActivity;
 			path = ../YMCalendarActivity;
@@ -190,6 +196,8 @@
 				702A528A17848EC100498B53 /* Default@2x.png in Resources */,
 				702A528C17848EC100498B53 /* Default-568h@2x.png in Resources */,
 				702A528F17848EC100498B53 /* MainStoryboard.storyboard in Resources */,
+				702A52A517849FF500498B53 /* Calendar.png in Resources */,
+				702A52A617849FF500498B53 /* Calendar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

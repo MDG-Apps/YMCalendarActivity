@@ -26,7 +26,7 @@
 }
 
 - (UIImage *)activityImage {
-    return nil;
+    return [UIImage imageNamed:@"Calendar.png"];
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
