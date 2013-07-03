@@ -14,7 +14,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utN-56-CeR">
                                 <items>
-                                    <navigationItem title="Title" id="7rn-0N-3sd">
+                                    <navigationItem title="YMCalendarActivityDemo" id="7rn-0N-3sd">
                                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="Eee-BE-6dG">
                                             <connections>
                                                 <action selector="actionButtonPushed:" destination="2" id="Hr5-NF-WlS"/>
@@ -36,6 +36,17 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionButtonPushed:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
