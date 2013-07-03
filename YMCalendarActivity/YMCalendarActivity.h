@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <EventKitUI/EventKitUI.h>
 
-@interface YMCalendarActivity : UIActivity
+@interface YMCalendarActivity : UIActivity <EKEventEditViewDelegate> {
+    EKEventEditViewController *viewController;
+}
 
 @end

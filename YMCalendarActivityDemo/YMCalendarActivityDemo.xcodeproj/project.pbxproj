@@ -20,6 +20,8 @@
 		702A529217848EC100498B53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702A529117848EC100498B53 /* ViewController.m */; };
 		702A529B1784913900498B53 /* YMCalendarActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 702A529A1784913900498B53 /* YMCalendarActivity.m */; };
 		702A529E178491F700498B53 /* YMCalendarActivityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 702A529D178491F700498B53 /* YMCalendarActivityEvent.m */; };
+		702A52A1178497D300498B53 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702A529F178497D200498B53 /* EventKit.framework */; };
+		702A52A2178497D300498B53 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702A52A0178497D300498B53 /* EventKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		702A529A1784913900498B53 /* YMCalendarActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCalendarActivity.m; sourceTree = "<group>"; };
 		702A529C178491F700498B53 /* YMCalendarActivityEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCalendarActivityEvent.h; sourceTree = "<group>"; };
 		702A529D178491F700498B53 /* YMCalendarActivityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCalendarActivityEvent.m; sourceTree = "<group>"; };
+		702A529F178497D200498B53 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		702A52A0178497D300498B53 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 				702A527617848EC100498B53 /* UIKit.framework in Frameworks */,
 				702A527817848EC100498B53 /* Foundation.framework in Frameworks */,
 				702A527A17848EC100498B53 /* CoreGraphics.framework in Frameworks */,
+				702A52A1178497D300498B53 /* EventKit.framework in Frameworks */,
+				702A52A2178497D300498B53 /* EventKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,8 @@
 				702A527517848EC100498B53 /* UIKit.framework */,
 				702A527717848EC100498B53 /* Foundation.framework */,
 				702A527917848EC100498B53 /* CoreGraphics.framework */,
+				702A529F178497D200498B53 /* EventKit.framework */,
+				702A52A0178497D300498B53 /* EventKitUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
