@@ -2,20 +2,19 @@
 //  YMCalendarActivity.m
 //  YMCalendarActivity
 //
-//  Created by Yusuke Miyazaki on 2013/07/04.
-//  Copyright (c) 2013 Yusuke Miyazaki. All rights reserved.
+//  Copyright (c) 2013-2014 Yusuke Miyazaki. All rights reserved.
 //
 
 #import "YMCalendarActivity.h"
 #import "YMCalendarActivityEvent.h"
 
-@implementation YMCalendarActivity
-
-- (id)init {
-    self = [super init];
-    
-    return self;
+@interface YMCalendarActivity () {
+    EKEventEditViewController *viewController;
 }
+
+@end
+
+@implementation YMCalendarActivity
 
 - (NSString *)activityType {
     return NSStringFromClass([self class]);
@@ -26,7 +25,12 @@
 }
 
 - (UIImage *)activityImage {
-    return [UIImage imageNamed:@"Calendar.png"];
+    float iOSVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (iOSVersion >= 7.0) {
+        return [UIImage imageNamed:@"Calendar.png"];
+    } else {
+        return [UIImage imageNamed:@"Calendar-6.png"];
+    }
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
@@ -44,27 +48,20 @@
             YMCalendarActivityEvent *event = activityItem;
             
             if (viewController == nil) {
-                viewController = [[EKEventEditViewController alloc] init];
-                
                 EKEventStore *es = [[EKEventStore alloc] init];
-                [es requestAccessToEntityType:EKEntityTypeEvent
-                                   completion:^(BOOL granted, NSError *error) {
-                                       if (granted) {
-                                           EKEvent *e = [EKEvent eventWithEventStore:es];
-                                           e.title = event.title;
-                                           e.location = event.location;
-                                           e.notes = event.notes;
-                                           e.URL = event.URL;
-                                           e.timeZone = event.timeZone;
-                                           e.startDate = event.startDate;
-                                           e.endDate = event.endDate;
-                                           
-                                           viewController.eventStore = es;
-                                           viewController.event = e;
-                                       }
-                                       
-                                       viewController.editViewDelegate = self;
-                                   }];
+                EKEvent *e = [EKEvent eventWithEventStore:es];
+                e.title = event.title;
+                e.location = event.location;
+                e.notes = event.notes;
+                e.URL = event.URL;
+                e.timeZone = event.timeZone;
+                e.startDate = event.startDate;
+                e.endDate = event.endDate;
+
+                viewController = [[EKEventEditViewController alloc] init];
+                viewController.editViewDelegate = self;
+                viewController.event = e;
+                viewController.eventStore = es;
             }
         }
     }
