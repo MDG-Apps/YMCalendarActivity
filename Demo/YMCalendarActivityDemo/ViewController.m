@@ -11,12 +11,6 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    //eventStore = [[EKEventStore alloc] init];
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
@@ -42,7 +36,6 @@
     
     [self presentViewController:avc animated:YES completion:nil];
 }
-
 
 - (void)checkEventStoreAccessForCalendar {
     EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
