@@ -24,6 +24,8 @@
 		707AF6B518D8A46400E29CC6 /* Calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 707AF6AF18D8A46400E29CC6 /* Calendar@2x.png */; };
 		707AF6B618D8A46400E29CC6 /* YMCalendarActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 707AF6B118D8A46400E29CC6 /* YMCalendarActivity.m */; };
 		707AF6B718D8A46400E29CC6 /* YMCalendarActivityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 707AF6B318D8A46400E29CC6 /* YMCalendarActivityEvent.m */; };
+		707AF6BA18D8D27700E29CC6 /* Calendar-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 707AF6B818D8D27700E29CC6 /* Calendar-6.png */; };
+		707AF6BB18D8D27700E29CC6 /* Calendar-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 707AF6B918D8D27700E29CC6 /* Calendar-6@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		707AF6B118D8A46400E29CC6 /* YMCalendarActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCalendarActivity.m; sourceTree = "<group>"; };
 		707AF6B218D8A46400E29CC6 /* YMCalendarActivityEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCalendarActivityEvent.h; sourceTree = "<group>"; };
 		707AF6B318D8A46400E29CC6 /* YMCalendarActivityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCalendarActivityEvent.m; sourceTree = "<group>"; };
+		707AF6B818D8D27700E29CC6 /* Calendar-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-6.png"; sourceTree = "<group>"; };
+		707AF6B918D8D27700E29CC6 /* Calendar-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-6@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				707AF6B318D8A46400E29CC6 /* YMCalendarActivityEvent.m */,
 				707AF6AE18D8A46400E29CC6 /* Calendar.png */,
 				707AF6AF18D8A46400E29CC6 /* Calendar@2x.png */,
+				707AF6B818D8D27700E29CC6 /* Calendar-6.png */,
+				707AF6B918D8D27700E29CC6 /* Calendar-6@2x.png */,
 			);
 			name = YMCalendarActivity;
 			path = ../YMCalendarActivity;
@@ -197,6 +203,8 @@
 				707AF6B418D8A46400E29CC6 /* Calendar.png in Resources */,
 				707AF6B518D8A46400E29CC6 /* Calendar@2x.png in Resources */,
 				702A528C17848EC100498B53 /* Default-568h@2x.png in Resources */,
+				707AF6BB18D8D27700E29CC6 /* Calendar-6@2x.png in Resources */,
+				707AF6BA18D8D27700E29CC6 /* Calendar-6.png in Resources */,
 				702A528F17848EC100498B53 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,7 +25,12 @@
 }
 
 - (UIImage *)activityImage {
-    return [UIImage imageNamed:@"Calendar.png"];
+    float iOSVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (iOSVersion >= 7.0) {
+        return [UIImage imageNamed:@"Calendar.png"];
+    } else {
+        return [UIImage imageNamed:@"Calendar-6.png"];
+    }
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
