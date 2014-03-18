@@ -1,5 +1,8 @@
 YMCalendarActivity
 ==================
+
+[![Build Status](https://travis-ci.org/litesystems/YMCalendarActivity.png?branch=master)](https://travis-ci.org/litesystems/YMCalendarActivity)
+
 **YMCalendarActivity** is a custom `UIActivity` that adds event to the calendar with `EKEventEditViewController`.
 
 ![Screenshot of YMCalendarActivity](Screenshot.png)
