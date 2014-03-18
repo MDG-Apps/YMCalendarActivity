@@ -34,9 +34,11 @@
         <h1>
 <a name="ymcalendaractivity" class="anchor" href="#ymcalendaractivity"><span class="octicon octicon-link"></span></a>YMCalendarActivity</h1>
 
+<p><a href="https://travis-ci.org/litesystems/YMCalendarActivity"><img src="https://travis-ci.org/litesystems/YMCalendarActivity.png?branch=master" alt="Build Status"></a></p>
+
 <p><strong>YMCalendarActivity</strong> is a custom <code>UIActivity</code> that adds event to the calendar with <code>EKEventEditViewController</code>.</p>
 
-<p><img src="https://raw.github.com/litesystems/YMCalendarActivity/master/Screenshot.png" alt="Screenshot of YMCalendarActivity"></p>
+<p><img src="Screenshot.png" alt="Screenshot of YMCalendarActivity"></p>
 
 <h1>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h1>
@@ -52,27 +54,12 @@ Then add <code>YMCalendarActivity.h</code>, <code>YMCalendarActivity.m</code>, <
 <h1>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
 
-<pre lang="objective-c```"><code>- (void)actionButtonPushed:(id)sender {
-    NSString *text = @"YMCalendarActivity";
-    NSURL *url = [NSURL URLWithString:@"https://github.com/litesystems/YMCalendarActivity"];
-    YMCalendarActivityEvent *event = [[YMCalendarActivityEvent alloc] init];
+<p>See demo project.</p>
 
-    event.title = @"My Event";
-    event.location = @"Home";
-    event.notes = @"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-    event.URL = [NSURL URLWithString:@"https://github.com/litesystems/YMCalendarActivity"];
-    event.timeZone = [NSTimeZone localTimeZone];
-    event.startDate = [NSDate dateWithTimeIntervalSinceNow:60*60];
-    event.endDate = [NSDate dateWithTimeInterval:60*60 sinceDate:event.startDate];
+<h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
 
-    YMCalendarActivity *activity = [[YMCalendarActivity alloc] init];
-
-    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:@[text, url, event]
-                                                                      applicationActivities:@[activity]];
-
-    [self presentViewController:avc animated:YES completion:nil];
-}
-</code></pre>
+<p>The MIT License. See <a href="LICENSE">LICENSE</a>.</p>
       </section>
     </div>
 
