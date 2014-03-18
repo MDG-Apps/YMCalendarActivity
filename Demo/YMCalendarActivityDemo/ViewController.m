@@ -9,11 +9,19 @@
 
 #import "YMCalendarActivity.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    //eventStore = [[EKEventStore alloc] init];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self checkEventStoreAccessForCalendar];
+}
 
 - (void)actionButtonPushed:(id)sender {
     NSString *text = @"YMCalendarActivity";
@@ -33,6 +41,33 @@
                                                                       applicationActivities:@[activity]];
     
     [self presentViewController:avc animated:YES completion:nil];
+}
+
+
+- (void)checkEventStoreAccessForCalendar {
+    EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
+    switch (status) {
+        case EKAuthorizationStatusAuthorized:
+            break;
+        case EKAuthorizationStatusNotDetermined:
+            [[[EKEventStore alloc] init] requestAccessToEntityType:EKEntityTypeEvent
+                                                        completion:^(BOOL granted, NSError *error) {}];
+            break;
+        case EKAuthorizationStatusDenied:
+            break;
+        case EKAuthorizationStatusRestricted:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Privacy Warning"
+                                                            message:@"Permission was not granted for Calendar"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 @end
