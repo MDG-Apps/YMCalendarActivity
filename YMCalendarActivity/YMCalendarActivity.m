@@ -57,7 +57,8 @@
                 e.timeZone = event.timeZone;
                 e.startDate = event.startDate;
                 e.endDate = event.endDate;
-
+                e.allDay = event.allDay;
+                
                 viewController = [[EKEventEditViewController alloc] init];
                 viewController.editViewDelegate = self;
                 viewController.event = e;

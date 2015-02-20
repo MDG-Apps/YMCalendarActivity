@@ -18,5 +18,6 @@
 
 @property (nonatomic) NSDate *startDate;
 @property (nonatomic) NSDate *endDate;
+@property (nonatomic) BOOL allDay;
 
 @end
