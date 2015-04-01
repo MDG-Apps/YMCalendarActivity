@@ -21,7 +21,7 @@
 }
 
 - (NSString *)activityTitle {
-    return NSLocalizedString(@"Add to Calendar",nil);
+    return NSLocalizedString(@"Add to Calendar", nil);
 }
 
 - (UIImage *)activityImage {
