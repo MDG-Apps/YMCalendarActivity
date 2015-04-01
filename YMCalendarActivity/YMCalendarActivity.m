@@ -21,7 +21,7 @@
 }
 
 - (NSString *)activityTitle {
-    return @"Add to Calendar";
+    return NSLocalizedString(@"Add to Calendar",nil);
 }
 
 - (UIImage *)activityImage {
@@ -57,7 +57,8 @@
                 e.timeZone = event.timeZone;
                 e.startDate = event.startDate;
                 e.endDate = event.endDate;
-
+                e.allDay = event.allDay;
+                
                 viewController = [[EKEventEditViewController alloc] init];
                 viewController.editViewDelegate = self;
                 viewController.event = e;
