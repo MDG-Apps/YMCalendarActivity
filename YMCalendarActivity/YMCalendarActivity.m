@@ -24,12 +24,23 @@
     return NSLocalizedString(@"Add to Calendar", nil);
 }
 
+- (NSBundle *)getCocoapodBundle {
+    NSBundle *podBundle = [NSBundle bundleForClass:[self classForCoder]];
+    NSURL *bundleURL = [podBundle URLForResource:@"YMCalendarIconBundle" withExtension:@"bundle"];
+    if (bundleURL != NULL) {
+        NSBundle *bundle = [NSBundle bundleWithURL:bundleURL];
+        return bundle;
+    }
+    return NULL;
+}
+
 - (UIImage *)activityImage {
     float iOSVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    NSBundle *bundle = [self getCocoapodBundle];
     if (iOSVersion >= 7.0) {
-        return [UIImage imageNamed:@"Calendar.png"];
+        return [UIImage imageNamed:@"Calendar.png" inBundle:bundle compatibleWithTraitCollection:NULL];
     } else {
-        return [UIImage imageNamed:@"Calendar-6.png"];
+        return [UIImage imageNamed:@"Calendar-6.png" inBundle:bundle compatibleWithTraitCollection:NULL];
     }
 }
 
